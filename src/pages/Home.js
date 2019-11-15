@@ -19,6 +19,7 @@ class Home extends React.Component {
   }
   
   async componentDidMount(){
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
     const date = dayjs()
     const dateFormatted = date.format('YYYY[-]MM[-]DD')
     try {
@@ -54,6 +55,11 @@ class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <ins className='adsbygoogle'
+          style={{ display: 'block' }}
+          data-ad-client='ca-pub-12121212'
+          data-ad-slot='12121212'
+          data-ad-format='auto' />
         <CssBaseline />
         <Container fixed>
           {this.state.loading && <Loading />}
@@ -62,6 +68,7 @@ class Home extends React.Component {
           }
         </Container>
       </React.Fragment>
+      
     );
   }
 }
